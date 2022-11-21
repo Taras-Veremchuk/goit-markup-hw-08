@@ -1,0 +1,62 @@
+.backdroup.modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    overflow: auto;
+
+    min-width: 528px;
+    min-height: 581px;
+
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 250ms var(--timing-function);
+    }
+.modal-title {
+            margin-bottom: 12px;
+    
+            font-weight: 700;
+            font-size: 20px;
+            line-height: calc(23 / 20);
+            text-align: center;
+            letter-spacing: 0.03em;
+    
+            color: var(--secondary-text-color);
+}
+// modal-close-button
+.modal-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    min-width: 30px;
+    min-height: 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.close-button-icon {
+    fill: var(--black-color);
+
+    transition: fill 250ms var(--timing-function);
+
+    &:hover {
+        fill: var(--accent-color);
+    }
+}
+
+

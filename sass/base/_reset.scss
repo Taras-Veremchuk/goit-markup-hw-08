@@ -1,0 +1,32 @@
+body {
+    font-family: var(--main-font);
+    color: var(--primary-text-color);
+    background-color: var(--white-color);
+}
+a {
+    margin: 0;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+button{
+    cursor:pointer;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height:auto;
+}
