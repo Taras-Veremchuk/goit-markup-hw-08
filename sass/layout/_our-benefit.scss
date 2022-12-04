@@ -1,16 +1,35 @@
-.benefit-container {
-    justify-content: space-between;
+.benefit{
+    @extend %section;
 }
 
+
 .benefit-list {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: block;
+    // tablet
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        }
 }
 
 .benefit-list__item {
-    width: 270px;
+    max-width: 450px;
+    // tablet
+        @media screen and (min-width: $tablet) {
+            flex-basis: 354px;
+        }
+        // desktop
+        @media screen and (min-width: $desktop) {
+            flex-basis: 270px;
+        }
 }
+ // mobile
+ @media screen and (max-width: 767px) {
+    .benefit-list__item:not(:last-child){
+        margin-bottom: 30px;
+    }
+ }
 
 .benefit-list__theme {
     display: flex;
@@ -19,12 +38,17 @@
     margin-bottom: 30px;
 
     height: 120px;
-    width: 270px;
+    width: 100%;
 
     background-color: var(--team-button-background-color);
 }
 
 .benefit-list__title {
+    // mobile
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+
     margin-bottom: 10px;
 
     font-weight: 700;

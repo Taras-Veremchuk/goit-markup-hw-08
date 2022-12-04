@@ -1,26 +1,47 @@
 /* Підвал */
-/* ADRESS-BOX */
 .footer {
-    padding: 60px 0;
-
+    padding-top: 60px;
+    padding-bottom: 60px;
     background: var(--hero-footer-background-color);
+    @media screen and(max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .footer__container {
+    display: block;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: baseline;
+}
+@media  screen and(min-width: $desktop) {
     display: flex;
     align-items: baseline;
 }
+}
 
+/* ADRESS-BOX */
 .adress-box {
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
     gap: 20px;
+@media screen and(max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+    @media screen and(min-width: $desktop) {
+        margin-right: 70px;
+    }
+
 }
 
 
 .adress-list__item:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and(min-width: $desktop){
     margin-bottom: 9px;
+}
 }
 
 .adress-list__link {
@@ -46,7 +67,14 @@
         }
 /* SOCIAL-B0X */
 .social-box {
-    margin-right: 93px;
+    text-align: center;
+    @media screen and(max-width: 767px) {
+            margin-bottom: 60px;
+        }
+    @media screen and(min-width: $desktop){
+        margin-right: 93px;
+        text-align: left;
+    }
 }
 
 .footer-text {
@@ -61,17 +89,25 @@
     color: var(--white-color);
 }
 /* SUBSCRIPTION-BOX */
-.footer-form {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+.subscription-box{
+    text-align: center;
+    @media screen and(min-width: $desktop){
+        text-align: left;
+    }
+}
+.footer-form{
+    @media screen and(min-width: $desktop) {
+            display: flex;
+            gap: 12px;
+        }
 }
 
 .footer-form__input {
     padding-left: 16px;
 
-    width: 358px;
     height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
 
     font-size: inherit;
     font-family: inherit;
@@ -95,7 +131,16 @@
     
         color: rgba(255, 255, 255, 0.6);
     }
-}
+    @media screen  and (max-width: 1199px){
+        // width: 100%;
+        max-width: 450px;
+    // margin-bottom: 20px;
+    display: inline-flex;
+    }
+         @media screen and(min-width: $desktop){
+            width: 100%;
+         min-width: 358px;
+}}
 
 
 .button__icon-send {

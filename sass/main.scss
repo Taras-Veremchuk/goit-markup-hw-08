@@ -2,11 +2,11 @@
 @import './utils/visually-hidden';
 @import './utils/is-hidden';
 @import './utils/variables';
+@import './utils/placeholders';
 // BASE
 @import './base/reset';
 // COMPONENTS
 @import './components/button';
-@import './components/container';
 @import './components/current';
 @import './components/footer';
 @import './components/header';
@@ -16,9 +16,10 @@
 @import './components/modal-form';
 @import './components/section-title';
 @import './components/social-link';
-@import './components/section';
 @import './components/section-title';
 @import './components/neighbor';
+@import './components/menu';
+@import './components/container';
 // LAYOUT
 @import './layout/hero';
 @import './layout/our-benefit';
@@ -26,4 +27,3 @@
 @import './layout/our-team';
 @import './layout/our-clients';
 @import './layout/our-works';
-

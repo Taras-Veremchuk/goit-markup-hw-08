@@ -15,8 +15,8 @@
 </head>
 
 <body>
+  <!-- Навігація -->
   <header class="header">
-    <!--Навігація -->
     <div class="header-container container">
       <a href="./index.html" class="logo link">Web<span class="logo--head-last-word">Studio</span></a>
       <nav class="nav">
@@ -48,11 +48,16 @@
           </a>
         </li>
       </ul>
+      <button class="menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-burger--icon" width="40" height="40">
+          <use href="./images/sprite.svg#burger-icon"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <main>
     <!--Герой-->
-    <section class="hero-section">
+    <section class=" hero-section">
       <div class="container">
         <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="button" data-modal-open>Замовити послугу</button>
@@ -100,9 +105,10 @@
         </form>
       </div>
     </div>
+    </div>
     <!--Наші переваги-->
-    <section class="section">
-      <div class="benefit-container container">
+    <section class="benefit">
+      <div class="container">
         <h2 class="visually-hidden">Наші переваги</h2>
         <ul class="benefit-list">
           <li class="benefit-list__item">
@@ -112,7 +118,8 @@
               </svg>
             </div>
             <h3 class="benefit-list__title">Увага до деталей</h3>
-            <p class="benefit-list__text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+            <p class="benefit-list__text">Ідейні міркування, і навіть початок повсякденної роботи з формування
+              позиції.
             </p>
           </li>
           <li class="benefit-list__item">
@@ -122,7 +129,8 @@
               </svg>
             </div>
             <h3 class="benefit-list__title">Пунктуальність</h3>
-            <p class="benefit-list__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+            <p class="benefit-list__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у
+              себе.</p>
           </li>
           <li class="benefit-list__item">
             <div class="benefit-list__theme">
@@ -140,31 +148,38 @@
               </svg>
             </div>
             <h3 class="benefit-list__title">Сучасні технології</h3>
-            <p class="benefit-list__text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+            <p class="benefit-list__text">Значимість цих проблем настільки очевидна, що реалізація планових
+              завдань.</p>
           </li>
         </ul>
       </div>
     </section>
-    <!--Чим ми займаємося-->
-    <section class="section neighbor section--no-padding">
+    <!-- Чим ми займаємося -->
+    <section class="activity neighbor">
       <div class="activity-container container">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="activity-list">
           <li>
             <div class="activity-list__box">
-              <img class="activity-list__img" src="./images/activity/img1.jpg" alt="нотатка на папері" width="370" />
+              <img class="activity-list__img"
+                srcset="./images/activity/desktop/img_1@1x.jpg 1x, ./images/activity/img_1@2x.jpg 2x"
+                src="./images/activity/desktop/img_1@1x.jpg" alt="нотатка на папері" width="370" />
               <p class="activity-list__overlay">Десктопні додатки</p>
             </div>
           </li>
           <li>
             <div class="activity-list__box">
-              <img class="activity-list__img" src="./images/activity/img2.jpg" alt="нотатка на ноутбуці" width="370" />
+              <img class="activity-list__img"
+                srcset="./images/activity/desktop/img_2@1x.jpg 1x, ./images/activity/img_2@2x.jpg 2x"
+                src="./images/activity/desktop/img_2@1x.jpg" alt="нотатка на ноутбуці" width="370" />
               <p class="activity-list__overlay">Мобільні додатки</p>
             </div>
           </li>
           <li>
             <div class="activity-list__box">
-              <img class="activity-list__img" src="./images/activity/img3.jpg" alt="нотатка на планшеті" width="370" />
+              <img class="activity-list__img"
+                srcset="./images/activity/desktop/img_3@1x.jpg 1x, ./images/activity/img_3@2x.jpg 2x"
+                src="./images/activity/desktop/img_3@1x.jpg" alt="нотатка на планшеті" width="370" />
               <p class="activity-list__overlay">Дизайнерські рішення</p>
             </div>
           </li>
@@ -172,12 +187,16 @@
       </div>
     </section>
     <!--Наша команда-->
-    <section class="section neighbor">
+    <section class="team neighbor">
       <div class="container">
         <h2 class="section-title">Наша команда</h2>
         <ul class="team-list">
           <li class="team-list__item">
-            <img class="team-list__img" src="./images/team/team1.jpg" alt="Ігор Дем'яненко" width="270" />
+            <img class="team-list__img" srcset="./images/team/img-1_270.jpg 270w, ./images/team/img-1_354.jpg 354w,
+               ./images/team/img-1_450.jpg 450w, ./images/team/img-1_540.jpg 540w, 
+               ./images/team/img-1_708.jpg 708w, ./images/team/img-1_900.jpg 900w, "
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+              src="./images/team/img-1_450.jpg" alt="Ігор Дем'яненко" width="450" />
             <div class="team-box">
               <h3 class="team-list__employee-name">Ігор Дем'яненко</h3>
               <p class="team-list__employee-spesiality">Product Designer</p>
@@ -218,7 +237,14 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img class="team-list__img" src="./images/team/team2.jpg" alt="Ольга Рєпіна" width="270" />
+            <img class="team-list__img" srcset="./images/team/img-2_270.jpg 270w,
+             ./images/team/img-2_354.jpg 354w,
+               ./images/team/img-2_450.jpg 450w,
+                ./images/team/img-2_540.jpg 540w, 
+               ./images/team/img-2_708.jpg 708w,
+                ./images/team/img-2_900.jpg 900w, " sizes="(min-width: 1200px) 270px, 
+              (min-width: 768px) 354px, 
+              (min-width: 480px) 450px, 100vw" src="./images/team/img-2_450.jpg" alt="Ольга Рєпіна" width="450" />
             <div class="team-box">
               <h3 class="team-list__employee-name">Ольга Рєпіна</h3>
               <p class="team-list__employee-spesiality">Frontend Developer</p>
@@ -259,7 +285,14 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img class="team-list__img" src="./images/team/team3.jpg" alt="Микола Тарасов" width="270" />
+            <img class="team-list__img" srcset="./images/team/img-3_270.jpg 270w,
+             ./images/team/img-3_354.jpg 354w,
+               ./images/team/img-3_450.jpg 450w,
+                ./images/team/img-3_540.jpg 540w, 
+               ./images/team/img-3_708.jpg 708w,
+                ./images/team/img-3_900.jpg 900w, " sizes="(min-width: 1200px) 270px, 
+              (min-width: 768px) 354px, 
+              (min-width: 480px) 450px, 100vw" src="./images/team/img-3_450.jpg" alt="Микола Тарасов" width="450" />
             <div class="team-box">
               <h3 class="team-list__employee-name">Микола Тарасов</h3>
               <p class="team-list__employee-spesiality">Marketing</p>
@@ -300,7 +333,15 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img class="team-list__img" src="./images/team/team4.jpg" alt="Михайло Єрмаков" width="270" />
+            <img class="team-list__img" srcset="./images/team/img-4_270.jpg 270w,
+             ./images/team/img-4_354.jpg 354w,
+               ./images/team/img-4_450.jpg 450w,
+                ./images/team/img-4_540.jpg 540w, 
+               ./images/team/img-4_708.jpg 708w,
+                ./images/team/img-4_900.jpg 900w, " sizes="(min-width: 1200px) 270px, 
+              (min-width: 768px) 354px, 
+              (min-width: 480px) 450px, 100vw" src="./images/team/img-4_450.jpg" alt="Михайло Єрмаков" height="460"
+              width="450" />
             <div class="team-box">
               <h3 class="team-list__employee-name">Михайло Єрмаков</h3>
               <p class="team-list__employee-spesiality">UI Designer</p>
@@ -344,11 +385,11 @@
       </div>
     </section>
     <!-- Постійні клієнти -->
-    <section class="section neighbor">
+    <section class="clients neighbor">
       <div class="container">
         <h2 class="section-title">Постійні клієнти</h2>
         <ul class="clients-list">
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -356,7 +397,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -364,7 +405,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -372,7 +413,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -380,7 +421,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -388,7 +429,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="clients-list__item">
             <a href="#" class="clients-list__link link" target="_blank" rel="nofollow noopener noreferrer"
               aria-label="clients company icon">
               <svg class="clients-list__icon" width="106" height="60">
@@ -404,7 +445,7 @@
   <footer class="footer">
     <div class="footer__container container">
       <div class="adress-box">
-        <a href="./index.html" class="foot logo link">Web<span class="logo--foot-last-word">Studio</span></a>
+        <a href="./index.html" class="logo link">Web<span class="logo--foot-last-word">Studio</span></a>
         <address>
           <ul class="adress-list">
             <li class="adress-list__item">
@@ -460,9 +501,7 @@
       <div class="subscription-box">
         <p class="footer-text">Підпишіться на розсилку</p>
         <form name="subscription" class="footer-form">
-          <label>
-            <input class="footer-form__input" type="text" name="user_email" placeholder="E-mail" required>
-          </label>
+          <input class="footer-form__input" type="text" name="user_email" placeholder="E-mail" required>
           <button type="submit" class="button button--size ">Підписатися<svg class="button__icon-send" width="24px"
               height="24px">
               <use href="./images/icons.svg#icon-send"></use>
@@ -471,7 +510,56 @@
       </div>
     </div>
   </footer>
+  <!-- MOBILE-MENU -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu js-close-menu">
+      <svg class="menu-close--icon" width="40" height="40">
+        <use href="./images/sprite.svg#burger-close-button"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link mobile-menu-current">Студія</a>
+      </li>
+      <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфоліо</a></li>
+      <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Контакти</a></li>
+    </ul>
+    <ul class="mobile-contacts">
+      <li class="mobile-contacts__item">
+        <a href="tel:+380961111111" class="mobile-contacts__tel link">+38 096 111 11 11</a>
+      </li>
+      <li class="mobile-contacts__item">
+        <a href="mailto:info@devstudio.com" class="mobile-contacts__mail link">info@devstudio.com</a>
+      </li>
+    </ul>
+    <ul class="mobile-socials">
+      <li class="mobile-socials__item">
+        <a href="https://www.instagram.com" class="mobile-socials__link link" target="_blank"
+          rel="nofollow noopener noreferrer" aria-label="Instagram">Instagram
+        </a>
+      </li>
+      <li class="mobile-socials__item">
+        <a href="https://twitter.com" class="mobile-socials__link link" target="_blank"
+          rel="nofollow noopener noreferrer" aria-label="Twitter">Twitter
+        </a>
+      </li>
+      <li class="mobile-socials__item">
+        <a href="https://www.facebook.com" class="mobile-socials__link link" target="_blank"
+          rel="nofollow noopener noreferrer" aria-label="Facebook">Facebook
+        </a>
+      </li>
+      <li class="mobile-socials__item">
+        <a href="https://pl.linkedin.com" class="mobile-socials__link link" target="_blank"
+          rel="nofollow noopener noreferrer" aria-label="Linkedin">LinkedIn
+        </a>
+      </li>
+    </ul>
+  </div>
   <script src="./js/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>
