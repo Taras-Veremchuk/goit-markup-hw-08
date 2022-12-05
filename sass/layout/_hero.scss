@@ -39,6 +39,7 @@
 }
 // desktop
 @media screen and (min-width: $desktop) {
+    padding: 200px 0;
     max-width: 1600px;
     min-height: 600px;
     background-image: linear-gradient(to bottom,

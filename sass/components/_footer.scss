@@ -138,6 +138,7 @@
     display: inline-flex;
     }
          @media screen and(min-width: $desktop){
+    margin-bottom: 0;
             width: 100%;
          min-width: 358px;
 }}
